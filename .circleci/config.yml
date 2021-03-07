@@ -7,7 +7,7 @@ jobs: # we now have TWO jobs, so that a workflow can coordinate them!
           username: abinandan1989
           password: $DOCKERHUB_PASSWORD
     steps:
-      - checkout
+      - checkout # this pulls code down from GitHub
       - run: npm install
       - run: npm run spec1ChromeHeadedTest
 workflows:
