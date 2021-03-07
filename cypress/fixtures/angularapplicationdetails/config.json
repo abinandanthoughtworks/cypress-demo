@@ -1,0 +1,13 @@
+{
+  "url": "https://rahulshettyacademy.com/angularpractice/",
+  "name": "abinandan",
+  "gender": "Male",
+  "productNames": ["iphone X", "Blackberry", "Nokia Edge", "Samsung Note 8"],
+  "productNamesExpectedOrder": [
+    {"name": "iphone X", "price": "100000"},
+    {"name": "Samsung Note 8", "price": "85000"},
+    {"name": "Nokia Edge", "price": "65000"},
+    {"name": "Blackberry", "price": "50000"}
+  ],
+  "deliverylocation": "india"
+}

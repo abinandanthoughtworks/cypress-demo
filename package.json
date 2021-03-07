@@ -1,0 +1,32 @@
+{
+  "name": "cypresstraining",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypressRun": "node_modules/.bin/cypress run",
+    "spec1ChromeHeadedTestWithDashboard": "npm run cypressRun -- --spec cypress/integration/angularpractice/practice1.js --record --key 41f4e253-8987-4e6f-a40b-8ece1ab4587c ",
+    "spec1ChromeHeadedTest": "npm run cypressRun -- --spec cypress/integration/angularpractice/practice1.js --headless --browser=chrome "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "cypress": "^6.5.0",
+    "cypress-cucumber-preprocessor": "^4.0.1",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^8.3.0",
+    "mochawesome": "^6.2.2",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  }
+}
