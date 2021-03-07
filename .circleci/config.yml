@@ -1,0 +1,17 @@
+version: 2
+jobs: # we now have TWO jobs, so that a workflow can coordinate them!
+  one: # This is our first job.
+    docker: # it uses the docker executor
+      - image: abinandan1989/cypressrun:latest
+        auth:
+          username: abinandan1989
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout # this pulls code down from GitHub
+      - run: npm install
+      - run: npm run spec1ChromeHeadedTest
+workflows:
+  version: 2
+  one: # this is the name of our workflow
+    jobs: # and here we list the jobs we are going to run.
+      - one

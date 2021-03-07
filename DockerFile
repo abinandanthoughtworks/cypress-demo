@@ -1,6 +1,8 @@
-FROM node:14
+FROM cypress/browsers:latest
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
+RUN $(npm bin)/cypress verify
 COPY . .
-CMD [ "npx", "cypress","run" ]
+EXPOSE 8080
+CMD ["npm","run" ,"spec1ChromeHeadedTest"]

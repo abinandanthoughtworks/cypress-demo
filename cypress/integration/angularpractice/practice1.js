@@ -20,7 +20,7 @@ describe.only('Angular application practice', () => {
     cy.visit(Cypress.env('url'));
   });
 
-  it.only('TC_AP01_Verify if the Two way binding example textbox displays the data entered in the Name Textbox', () => {
+  it('TC_AP01_Verify if the Two way binding example textbox displays the data entered in the Name Textbox', () => {
     homePage
       .getEditBox()
       .type(applicationConfig.name)

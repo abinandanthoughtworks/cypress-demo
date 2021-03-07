@@ -2,11 +2,12 @@
   "defaultCommandTimeout": 10000,
   "chromeWebSecurity": false,
   "env": {
-    "url": "https://rahulshettyacademy.com/",
+    "url": "https://rahulshettyacademy.com/angularpractice",
     "interceptURL": "https://example.cypress.io/commands/network-requests"
   },
   "projectId": "wcc4kt",
   "reporter": "mochawesome",
   "retries": {"runMode": 1},
-  "testFiles": "**/*.*"
+  "testFiles": "**/*.*",
+  "video": false
 }

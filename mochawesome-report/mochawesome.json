@@ -1,23 +1,80 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-03-07T06:04:41.985Z",
-    "end": "2021-03-07T06:04:42.000Z",
-    "duration": 15,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "start": "2021-03-07T09:29:40.422Z",
+    "end": "2021-03-07T09:29:50.269Z",
+    "duration": 9847,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    false
+    {
+      "uuid": "2561607b-38a5-46ef-9252-02a346c42cd3",
+      "title": "",
+      "fullFile": "cypress/integration/angularpractice/practice1.js",
+      "file": "cypress/integration/angularpractice/practice1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e3e58e6a-1640-466a-ab99-ce75152fd69d",
+          "title": "Angular application practice",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC_AP01_Verify if the Two way binding example textbox displays the data entered in the Name Textbox",
+              "fullTitle": "Angular application practice TC_AP01_Verify if the Two way binding example textbox displays the data entered in the Name Textbox",
+              "timedOut": null,
+              "duration": 8769,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.getEditBox().type(applicationConfig.name).should('have.value', applicationConfig.name);\nhomePage.getEditBox().should('have.attr', 'minlength', '2');\nhomePage.getTwoWayDataBinding().then(function (element) {\n  expect(element.val()).to.equal(applicationConfig.name);\n});\nhomePage.getEntrepreneaur().should('be.disabled', true);\nshopPage.getShopLink().click();\ncy.clickAddButtonByName({\n  propertyName: applicationConfig.productNames\n});\nshopPage.getCheckoutLink().click();\ncy.verifyPhoneNamesByAddedOrder({\n  phoneName: applicationConfig.productNamesExpectedOrder\n});\ncheckoutPage.getCheckoutButton().click();\nprotoCommerceHomePage.getCheckOutLabel().should('include.text', \"( \".concat(applicationConfig.productNames.length, \" )\"));\nprotoCommerceHomePage.getDeliveryLocationTextBox().type(applicationConfig.deliverylocation);\nCypress.config('defaultCommandTimeout', '11000');\nprotoCommerceHomePage.getSuggestionItemFromSearch().click();\nprotoCommerceHomePage.getAgreeTermsAndConditionsCheckbox().check({\n  force: true\n});\nprotoCommerceHomePage.getSubmitButton().click();",
+              "err": {},
+              "uuid": "41b9058f-40c7-407f-b39f-e75c26c9a562",
+              "parentUUID": "e3e58e6a-1640-466a-ab99-ce75152fd69d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "41b9058f-40c7-407f-b39f-e75c26c9a562"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8769,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {
