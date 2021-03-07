@@ -6,10 +6,13 @@ jobs: # we now have TWO jobs, so that a workflow can coordinate them!
         auth:
           username: abinandan1989
           password: $DOCKERHUB_PASSWORD
+    working_directory: /tmp
     steps:
       - checkout # this pulls code down from GitHub
       - run: npm install
       - run: npm run spec1ChromeHeadedTest
+      - store_artifacts:
+          path: /tmp/mochawesome-report
 workflows:
   version: 2
   one: # this is the name of our workflow
